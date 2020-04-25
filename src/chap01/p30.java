@@ -45,7 +45,7 @@ public class p30 {
 		System.out.println("1부터 x("+x+")까지의 합 : "+sum);
 	}
 	
-	//Q9) 정수 a, b를 포함하여 그 사이의 모든 정수의 합을 구하여 반환하는 아래 메서드를 작성하세요.
+	//Q9) 정수 a, b를 포함하여 그 사이의 모든 정수의 합을 구하여 반환하는 메서드를 작성하세요.
 	public static void Q9(int a, int b) {
 		int sum = 0;
 		
