@@ -1,7 +1,7 @@
 package chap01;
 
 public class p40 {
-	//Q15) 직각 이등변 사각형을 출력하는 부분을 아래와 같은 형식의 메서드로 작성하세요.
+	//Q15) 직각 이등변 삼각형을 출력하는 부분을 아래와 같은 형식의 메서드로 작성하세요.
 	static void Q15(int n) {
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j <i+1; j++) {
