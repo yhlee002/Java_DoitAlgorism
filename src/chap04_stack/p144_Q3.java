@@ -1,9 +1,7 @@
 package chap04_stack;
 
-import java.util.Arrays;
-
-//하나의 배열을 공유하여 2개의 스택을 구현하는 int형 데이터용 스택 클래스 생성
-//스택에 저장하는 데이터는 int형 값으로 아래 그림처럼 배열의 처음과 끝을 사용
+//Q3)하나의 배열을 공유하여 2개의 스택을 구현하는 int형 데이터용 스택 클래스 생성
+//cf. 스택에 저장하는 데이터는 int형 값으로 아래 그림처럼 배열의 처음과 끝을 사용
 class IntStack1{
 	int[] stack;
 	int ptr;

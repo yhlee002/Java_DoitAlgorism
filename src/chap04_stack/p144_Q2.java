@@ -2,12 +2,10 @@ package chap04_stack;
 
 import java.util.Scanner;
 
-class EmptyIntStackException2 extends Exception{
-	
+//Generic Stack 
+class EmptyIntStackException2 extends Exception {
 }
-
-class OverflowIntStackException2 extends Exception{
-
+class OverflowIntStackException2 extends Exception {
 }
 
 class StackG <E> { //generic타입을 받는 stack
