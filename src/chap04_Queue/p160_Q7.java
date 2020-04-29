@@ -160,7 +160,7 @@ class Deq{
 		for(int i = 0; i < num; i++) {
 			int idx = (i + front)%max;
 			if(deq[idx] == x) {
-				return deq[idx];
+				return i + 1;
 			}
 		}
 		return 0;
