@@ -110,9 +110,7 @@ class IntStack{
 			}
 			System.out.println("]");
 		}
-	}
-	
-	
+	}	
 }
 
 class EmptyIntStackException extends Exception{
