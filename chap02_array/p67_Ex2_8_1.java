@@ -2,7 +2,7 @@ package chap02_array;
 
 import java.util.Scanner;
 
-//실습 2-8[A] : 수와 기수를 입력하면 해당 수를 해당 기수 형태로 변환하여 배열에 
+//실습 2-8[A] : 수와 기수를 입력하면 해당 수를 해당 기수 형태로 변환하여 배열에 넣기
 public class p67_Ex2_8_1 {
 	//어떤 수가 주어졌을때 몫이 0이 될때까지(0이 아닌 동안) 기수로 나누고  각 자리를 배열의 자리에 넣음
 	
@@ -26,7 +26,7 @@ public class p67_Ex2_8_1 {
 		int x = sc.nextInt();
 		System.out.println("기수를 입력하시오.");
 		int y = sc.nextInt();
-		jarisoo = Ex2_8(x, y, a); //Ex2_8(300, 16, a)는 10진수 300을 16진수로  변환할때 차지하는 자리수를 리턴
+		jarisoo = Ex2_8(x, y, a); //Ex2_8(300, 16, a)는 10진수 300을 16진수로 변환할때 차지하는 자리수를 리턴
 		for(int i = jarisoo - 1; i >= 0; i--) { //배열의 인덱스는 0부터 자리수-1까지로 나타남.
 			System.out.print(a[i]);
 		}
