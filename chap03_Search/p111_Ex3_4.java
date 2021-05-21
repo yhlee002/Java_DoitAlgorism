@@ -11,7 +11,8 @@ import java.util.Scanner;
 
 public class p111_Ex3_4{
 	static int search(int[] arr, int key) {
-		int n = arr.length;
+		int n = arr.length; // 배열의 요솟수
+		// pl, pc, pr은 모두 인덱스
 		int pl = 0;
 		int pr = n - 1;
 		int pc;
@@ -23,12 +24,12 @@ public class p111_Ex3_4{
 			}else if(key > arr[pc]) {
 				pl = pc + 1;
 				
-			}else if(key < arr[pc]) {
-				pr = arr[pc - 1];
+			}else { // key < arr[pc]
+				pr = pc - 1;
 			}
 		}while(pl <= pr);
 		
-		return 0;
+		return -1; // 0 이상의 수들은 인덱스에 해당될 수 있음
 	}
 	
 	public static void main(String[] args) {
@@ -45,8 +46,6 @@ public class p111_Ex3_4{
 		}
 		//배열 요소들을 오름차순으로 정렬하기
 		Arrays.sort(arr);
-		//배열 요소 확인용 출력문
-		System.out.println(Arrays.toString(arr));
 		
 		//key입력받기
 		System.out.println("검색할 key를 입력하세요.");
@@ -54,7 +53,7 @@ public class p111_Ex3_4{
 		
 		//검색 메소드 호출
 		int searchResult = search(arr, key);
-		if(searchResult == 0) {
+		if(searchResult == -1) {
 			System.out.println("검색 결과가 존재하지 않습니다.");
 		}else {
 			System.out.println("검색 결과, key는 a["+searchResult+"]에 위치합니다.");
