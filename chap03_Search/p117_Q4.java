@@ -51,17 +51,12 @@ public class p117_Q4 {
 			}else if(a[pc] > key) {
 				pr = pc - 1;
 			}
-			 
-		}		
-		
-		
-		
-		
-		
+
+		}
 	}
 	
 	public static void main(String[] args) {
-		int[] arr = { 1, 2, 3, 5, 6, 8, 9};
+		int[] arr = { 1, 2, 3, 5, 6, 8, 9}; // 애초에 정렬된 배열
 		int key = 2;
 		
 		search(arr, key);

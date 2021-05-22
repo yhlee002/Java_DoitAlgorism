@@ -6,13 +6,14 @@ import java.util.Scanner;
  * 맨 앞부터 순서대로 저장하고, 일치한 요솟수를 반환하는 메소드를 작성하세요. 
  * ex) 요솟수가 8인 배열 a의 요소가 {1, 9, 2, 9, 4, 6, 7, 9}이고, key가 9면 
  * 배열 idx에 {1, 3, 7}을 저장하고 3을 반환합니다.
+ * static searchIdx(int[] a, int n, int key, int[] idx)
  */
 public class p117_Q3 {
-	static int search(int[] a, int key, int[] idx) {
+	static int search(int[] a, int n, int key, int[] idx) {
 		int j = 0;
 		int cnt = 0;
 		
-		for(int i = 0; i < a.length; i++) {
+		for(int i = 0; i < n; i++) {
 			if(a[i] == key) {
 				idx[j++] = i;
 				cnt++;
@@ -37,7 +38,7 @@ public class p117_Q3 {
 			a[i] = sc.nextInt();
 		}
 		
-		System.out.println("일치한 요솟수 : "+search(a, key, idx));
+		System.out.println("일치한 요솟수 : "+search(a, n, key, idx));
 		
 		sc.close();
 	}
