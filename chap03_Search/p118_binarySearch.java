@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class p118_binarySearch {
 	public static void main(String[] args) {
 		//예시(p.119 - 120)
-		int[] arr = {5, 7, 15, 28, 29, 31, 39, 58, 68, 70};
+		int[] arr = {5, 7, 15, 28, 29, 31, 39, 58, 68, 70}; // 이미 오름차순으로 정렬되어 있다는 전제.
 		System.out.println("arr = "+Arrays.toString(arr));
 		System.out.println("arr.length : "+arr.length);
 		System.out.println("39를 검색 : "+Arrays.binarySearch(arr, 39));

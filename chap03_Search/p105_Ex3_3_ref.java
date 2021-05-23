@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //교재의 정답(보다 나은 코드) : 검색 메소드에서 보초값이 검색될 경우 다른 상수가 반환되도록 구현.
 public class p105_Ex3_3_ref {
-	static int searchKey(int[] a, int key) {
+	private static int searchKey(int[] a, int key) {
 		int i = 0;
 		for(i = 0; i < a.length; i++) {
 			if(a[i] == key)

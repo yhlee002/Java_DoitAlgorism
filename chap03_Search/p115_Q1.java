@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 // Q1)실습 3-3의 search 메소드를 while문이 아닌 for문을 사용해 수정한 프로그램을 작성하세요.(p105_ref.java의 내용과 동일)
 public class p115_Q1 {
-	static int searchKey(int[] arr, int key) {
+	private static int searchKey(int[] arr, int key) {
 		int i ;
 		for(i = 0; i < arr.length; i++) {
 			if(arr[i] == key) { //a[i] == key 여도, i가 보초가 있는 인덱스라면 

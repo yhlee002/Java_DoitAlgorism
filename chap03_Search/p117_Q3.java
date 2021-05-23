@@ -9,7 +9,7 @@ import java.util.Scanner;
  * static searchIdx(int[] a, int n, int key, int[] idx)
  */
 public class p117_Q3 {
-	static int search(int[] a, int n, int key, int[] idx) {
+	private static int search(int[] a, int n, int key, int[] idx) {
 		int j = 0;
 		int cnt = 0;
 		

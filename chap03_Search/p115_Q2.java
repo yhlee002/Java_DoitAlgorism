@@ -15,7 +15,7 @@ package chap03_Search;
  * (위 : %2s씩 인덱스, 왼쪽 : 2줄에 한번씩 '인덱스+행'과 '* 이동(space bar 2칸씩)' 작성
  */
 public class p115_Q2 {
-	static void scan(int[] arr, int key) {
+	private static void scan(int[] arr, int key) {
 		int i = 0;
 		String str = "";
 		System.out.printf("%3s", "|");

@@ -13,7 +13,7 @@ public class p115_Q2_retry {
      * 2) System.out.printf("%3d|"); 한번과 요솟수만큼 System.out.printf("%3d", a[i]);가 반복되는 반복문 1
      */
 
-    public static void scanSeqSearch(int[] a, int key) {
+    private static void scanSeqSearch(int[] a, int key) {
         // '   |   0   1   2   3 ...'
         System.out.printf("%4s", "|");
         for (int i = 0; i < a.length; i++) {

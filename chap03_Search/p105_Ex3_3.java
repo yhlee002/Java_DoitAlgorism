@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //실습 3-3) p102의 실습 3-1 수정(보초법 : 배열의 마지막에 찾으려는 값을 '보초'로 넣고, 이에 달하면 종료)
 public class p105_Ex3_3 {
-	static int searchKey(int[] a, int key) {
+	private static int searchKey(int[] a, int key) {
 		for(int i = 0; i < a.length; i++) {
 			if(a[i] == key)
 				return i;
