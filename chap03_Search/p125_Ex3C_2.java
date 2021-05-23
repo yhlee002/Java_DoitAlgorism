@@ -17,11 +17,13 @@ package chap03_Search;
  */
 public class p125_Ex3C_2 implements Comparable<p125_Ex3C_2> {
 
+    int n;
+
     @Override
-    public int compareTo(p125_Ex3C_2 o) { // compareTo()의 기본 형태
-        if (this > o)
+    public int compareTo(p125_Ex3C_2 o) { // compareTo()을 통해 같은 타입끼리 비교할 때 비교할 속성(필드) 지정해야함
+        if (this.n > o.n)
             return 1;
-        else if (this < o)
+        else if (this.n < o.n)
             return -1;
         else
             return 0;
@@ -34,4 +36,5 @@ public class p125_Ex3C_2 implements Comparable<p125_Ex3C_2> {
         else
             return false;
     }
+
 }

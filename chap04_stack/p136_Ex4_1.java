@@ -1,5 +1,7 @@
 package chap04_stack;
 
+import java.util.Arrays;
+
 /*
  * 스택 생성하기
  * pop() : 스택의 최상위(마지막)에 위치한 데이터를 추출한 후에 스택에서 삭제
@@ -22,8 +24,6 @@ class IntStack{
 	private int max; //스택 용량
 	private int ptr; //스택 포인터(다음에 들어올 데이터의 위치) 현재 스택에 쌓여있는 요소 수로도 여길 수 있음.
 	private int[] stk; //스택 본체(int값을 담음)
-	EmptyIntStackException emptyE;
-	OverflowIntStackException overflowE;
 	
 	public IntStack(int capacity) {
 		this.max =capacity;
@@ -132,14 +132,14 @@ class OverflowIntStackException extends Exception{
 public class p136_Ex4_1 {
 	public static void main(String[] args) throws OverflowIntStackException, EmptyIntStackException {
 		IntStack st = new IntStack(10);
-		System.out.print("st.push(5)");
+		System.out.println("st.push(5)");
 		st.push(5);//실제 배열 : [5, 0, 0, 0, 0, 0, 0, 0, 0, 0], Stack(저장된 인덱스까지만 출력되게 하는 메소드가 dump) : [5]
-		System.out.print("\nst.pop()");
+		System.out.println("st.pop()");
 		st.pop();//[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], Stack : []
-		System.out.println("\nst.push(3) : "+st.push(3)); //[3, 0]
+		System.out.println("st.push(3) : "+st.push(3)); //[3, 0]
 		System.out.println("st.push(6) : "+st.push(6)); //[3, 6]
 		System.out.println("st.pop() : "+st.pop());
-		//[3]이면 좋겠지만 '배열'을 사용하는 특성상 배열 전체를 출력하면 아직 [3, 6] (dump를 사용해 스택으로 삼는 부분만 출력시 [3])
+		//Cf.st가 속성으로 가지고 있고, 실제로 스택메모리로 사용되는 필드 stk를 출력하면 [3, 6] (dump를 사용해 스택으로 삼는 부분만 출력시 [3])
 		//차후에 push를 할 경우 index 1의 값이 6이 아닌 새로운 값으로 대체되는 식으로 변하는 것.
 		System.out.println("st.push(10) : "+st.push(10)); //[3, 10]
 		System.out.println("st.peek() : "+st.peek()); //10
