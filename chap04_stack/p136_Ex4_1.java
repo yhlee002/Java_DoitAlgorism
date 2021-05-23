@@ -34,9 +34,13 @@ class IntStack{
 		 * 존재하지 않는 배열에 잘못 접근하는 것을 방지
 		 */
 	}
-	
-	public int push(int x) throws OverflowIntStackException {
-		if(ptr >= max) { //새로 들어올 데이터의 자리가 배열의 길이와 같으면(인덱스 + 1이 되면)
+
+	/**
+	 * ptr은 0 이상, max 이하의 값일 수 밖에 없지만
+	 * 혹여나 잘못된 코드로 인해 max를 초과하는 것을
+	 * 방지하기 위해 등가부호('==')가 아닌 '>=' 사용 */
+	public int push(int x) throws OverflowIntStackException { // push한 값 반환
+		if(ptr >= max) {
 			throw new OverflowIntStackException("배열이 가득 찼습니다.");
 		}
 		return stk[ptr++] = x;
