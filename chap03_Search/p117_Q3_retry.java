@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 /** 문제에서 변수 'idx'의 타입으로 int타입 배열이 고정되어 있는 것이 아니라면 List 사용이 훨씬 좋을 것으로 여겨짐 */
 public class p117_Q3_retry {
-    public static int searchIdx(int[] a, int n, int key, int[] idx) {
+    static int searchIdx(int[] a, int n, int key, int[] idx) {
         int j = 0;
         for (int i = 0; i < n; i++) {
             if (a[i] == key) {

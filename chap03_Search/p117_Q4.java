@@ -12,8 +12,8 @@ package chap03_Search;
  *  2는 x[1]에 있습니다.
  */
 public class p117_Q4 {
-	
-	public static void search(int[] a, int key) {
+
+	private static void search(int[] a, int key) {
 		System.out.printf("%4s", "|");
 		for(int i = 0; i < a.length; i++) {
 			System.out.printf("%4d", i);

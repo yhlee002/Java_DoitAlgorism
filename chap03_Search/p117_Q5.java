@@ -16,7 +16,7 @@ import java.util.Scanner;
  */
 
 public class p117_Q5 {
-    public static ArrayList<Integer> search(int[] arr, int key) {
+    private static ArrayList<Integer> search(int[] arr, int key) {
         int pl = 0;
         int pr = arr.length - 1;
         ArrayList<Integer> a = new ArrayList<Integer>();

@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class p128_Ex3_8 {
 	
 	//이름, 키, 시력을 담는 클래스 생성 - 생성자로 정보들을 받아 객체를 생성할 수 있고, 내부에 comparator 클래스 생성
-	static class PhyscData{
+	private static class PhyscData{
 		String name;
 		int height;
 		double vision;
@@ -22,7 +22,7 @@ public class p128_Ex3_8 {
 		}
 	}
 	
-	static class MyComparator implements Comparator<PhyscData>{
+	private static class MyComparator implements Comparator<PhyscData>{
 
 		@Override
 		public int compare(PhyscData o1, PhyscData o2) {

@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 
 public class p111_Ex3_4{
-	static int search(int[] arr, int key) {
+	private static int search(int[] arr, int key) {
 		int n = arr.length; // 배열의 요솟수
 		// pl, pc, pr은 모두 인덱스
 		int pl = 0;
