@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class p142_Ex4_2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		IntStack is = new IntStack(64);// Stack capacity : 64
+		p136_Ex4_1.IntStack is = new p136_Ex4_1.IntStack(64);// Stack capacity : 64
 		boolean replay = true;
 		while(replay) {
 			System.out.println("Stack size : "+is.size());
@@ -15,23 +15,21 @@ public class p142_Ex4_2 {
 			
 			System.out.println("What do you want to do?");
 			System.out.println("1.push	2.pop	3.peek	4.dump	0.exit");
-			int doSomeThing = 0;
-			
-			//doSomeThing의 type이 int가 아닌 double이나 String일 경우 Mismatching Exception? 발생할텐데 이를 처리할 수는 없나?
+			int input = 0;
+
 			try {
-				doSomeThing = sc.nextInt();
+				input = sc.nextInt();
 			} catch (Exception e) {
 				System.out.println("Wrong Input");
 			}
 			
-			if(doSomeThing <= 0 || doSomeThing > 5) {
+			if(input <= 0 || input > 5) {
 				System.out.println("Wrong number");
 				continue;
 			}
 			
-			switch(doSomeThing) {
+			switch(input) {
 			case 1: //push
-				
 				try {
 					System.out.println("input data that you want to save in Stack");
 					is.push(sc.nextInt());
@@ -39,6 +37,7 @@ public class p142_Ex4_2 {
 					System.out.println("Stack is full");
 				}
 				break;
+
 			case 2: //pop
 				try {
 					System.out.println("pop!");
@@ -47,16 +46,19 @@ public class p142_Ex4_2 {
 					System.out.println("Stack is Empty");
 				}
 				break;
+
 			case 3: //peek
 				try {
 					System.out.println("is.peek() : "+is.peek());
 				} catch (EmptyIntStackException e) {
-					System.out.println("no data in Stack ");
+					System.out.println("Stack is Empty(no data to peek)");
 				}
 				break;
+
 			case 4: //dump
 				is.dump();
 				break;
+
 			case 5: //exit
 				replay = false;
 				break;

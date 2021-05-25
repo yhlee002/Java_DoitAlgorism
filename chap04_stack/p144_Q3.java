@@ -2,6 +2,7 @@ package chap04_stack;
 
 //Q3)하나의 배열을 공유하여 2개의 스택을 구현하는 int형 데이터용 스택 클래스 생성
 //cf. 스택에 저장하는 데이터는 int형 값으로 아래 그림처럼 배열의 처음과 끝을 사용
+
 class IntStack1{
 	int[] stack;
 	int ptr;
@@ -12,23 +13,23 @@ class IntStack1{
 		max = capacity;
 	}
 	
-	public void push(int x) throws OverflowIntStackException2 {
+	public void push(int x) throws OverflowIntStackException {
 		if(ptr == max) {
-			throw new OverflowIntStackException2();
+			throw new OverflowIntStackException();
 		}
 		stack[ptr++] = x;
 	}
 	
-	public int pop() throws EmptyIntStackException2 {
+	public int pop() throws EmptyIntStackException {
 		if(ptr == 0) {
-			throw new EmptyIntStackException2();
+			throw new EmptyIntStackException();
 		}
 		return stack[--ptr];
 	}
 	
-	public int peek() throws EmptyIntStackException2 {
+	public int peek() throws EmptyIntStackException {
 		if(ptr == 0) {
-			throw new EmptyIntStackException2();
+			throw new EmptyIntStackException();
 		}
 		return stack[ptr - 1];
 	}
@@ -54,22 +55,18 @@ class IntStack1{
 		}
 		return -1;
 	}
+
 	public void clear() {
 		ptr = 0;
 	}
 	
 	public boolean isEmpty() {
-		if(ptr == 0) {
-			return true;
-		}
-		return false;
+		return ptr == 0;
 	}
 	
 	public boolean isFull() {
-		if(ptr == 25) {
-			return true;
-		}
-		return false;
+		return ptr == 25;
+
 	}
 	
 	public int size() {
@@ -81,7 +78,6 @@ class IntStack1{
 	}
 }
 
-
 class IntStack2{
 	int[] stack;
 	int ptr;
@@ -92,23 +88,23 @@ class IntStack2{
 		max = capacity;
 	}
 	
-	public void push(int x) throws OverflowIntStackException2{
+	public void push(int x) throws OverflowIntStackException{
 		if(ptr == stack.length - max) {
-			throw new OverflowIntStackException2();
+			throw new OverflowIntStackException();
 		}
 		stack[ptr--] = x;
 	}
 	
-	public int pop() throws EmptyIntStackException2 {
+	public int pop() throws EmptyIntStackException {
 		if(ptr == stack.length - 1) {
-			throw new EmptyIntStackException2();
+			throw new EmptyIntStackException();
 		}
 		return stack[++ptr];
 	}
 	
-	public int peek() throws EmptyIntStackException2 {
+	public int peek() throws EmptyIntStackException {
 		if(ptr == stack.length - 1) {
-			throw new EmptyIntStackException2();
+			throw new EmptyIntStackException();
 		}
 		return stack[ptr + 1];
 	}
@@ -176,7 +172,7 @@ public class p144_Q3 {
 			is1.push(5);
 			is1.push(10);
 			is1.push(15);
-		} catch (OverflowIntStackException2 e1) {
+		} catch (OverflowIntStackException e1) {
 			e1.printStackTrace();
 		}
 		
@@ -184,26 +180,27 @@ public class p144_Q3 {
 		
 		try {
 			is1.pop();
-		} catch (EmptyIntStackException2 e1) {
+		} catch (EmptyIntStackException e1) {
 			e1.printStackTrace();
 		}
 		is1.dump();
 		
 		System.out.println("배열의 인덱스 25~50까지를 사용하는 stack 사용");
-		
-		try {
+
+		try{
 			is2.push(5);
 			is2.push(10);
 			is2.push(15);
-		} catch (OverflowIntStackException2 e) {
+		} catch (OverflowIntStackException e){
 			e.printStackTrace();
 		}
-		
+
+
 		is2.dump();
 		
 		try {
 			is2.pop();
-		} catch (EmptyIntStackException2 e) {
+		} catch (EmptyIntStackException e) {
 			e.printStackTrace();
 		}
 		is2.dump();

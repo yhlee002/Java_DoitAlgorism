@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class p144_Q1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		IntStack is = new IntStack(50);
+		p136_Ex4_1.IntStack is = new p136_Ex4_1.IntStack(50);
 		
 		//isEmpty, isFull, indexOf
 		while(true) {
@@ -62,12 +62,10 @@ public class p144_Q1 {
 				}else { //is.indexOf()가 -1을 리턴했을 때(찾지 못했을때)
 					System.out.println("no same data");
 				}
-				
-				
+
 				break;
 			}
-			
-			
+
 		}
 		sc.close();
 	}
