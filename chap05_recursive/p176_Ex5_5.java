@@ -2,18 +2,19 @@ package chap05_recursive;
 
 import java.util.Scanner;
 
-//재귀함수의 재귀 제거
+// Ex5-3 재귀함수의 재귀 제거
 public class p176_Ex5_5 {
 	public static void recurseX(int n) throws OverflowIntStackException, EmptyIntStackException {
-		
-//		재귀함수
-//		while(true) {
-//			recurseX(n-1);
-//			System.out.println(n);
-//			recurseX(n-2); --> n -= 2;
-//		}
-		
-		IntStack is = new IntStack(n);
+	/*
+		[기존의 재귀함수]
+		while(true) {
+			recurseX(n-1);
+			System.out.println(n);
+			recurseX(n-2); --> n -= 2;
+		}
+	 */
+
+		IntStack is = new IntStack(100);
 		
 		while(true) {
 			if(n > 0) {
