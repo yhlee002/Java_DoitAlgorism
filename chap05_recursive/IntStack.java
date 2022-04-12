@@ -1,17 +1,5 @@
 package chap05_recursive;
 
-class EmptyIntStackException extends Exception{
-	public EmptyIntStackException(String msg) {
-		super(msg);
-	}
-}
-
-class OverflowIntStackException extends Exception{
-	public OverflowIntStackException(String msg) {
-		super(msg);
-	}
-}
-
 public class IntStack{
 	private int max; //스택 용량
 	private int ptr; //스택 포인터(다음에 들어올 데이터의 위치) 현재 스택에 쌓여있는 요소 수로도 여길 수 있음.
