@@ -1,5 +1,7 @@
 package chap06_sort;
 
+import java.util.Arrays;
+
 // Merge Sort(미완성된 병합 정렬) : 전체 배열을 좌우로 한번 나눈 상태(a, b)를 가정.
 // cf. 나뉘어진 배열은 이미 정렬된 상태
 public class p243_Ex6_11 {
@@ -10,13 +12,15 @@ public class p243_Ex6_11 {
 
     while (ai < an && bi < bn) c[ci++] = a[ai] < b[bi] ? a[ai++] : b[bi++];
 
-    if (ai < an - 1) {
-      c[ai] = a[ai++];
+    while (ai < an) {
+      c[ci++] = a[ai++];
     }
 
-    if (bi < bn - 1) {
-      c[bi] = b[bi++];
+    while (bi < bn) {
+      c[ci++] = b[bi++];
     }
+
+    System.out.println(Arrays.toString(c));
   }
 
   public static void main(String[] args) {
